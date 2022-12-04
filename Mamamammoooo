@@ -1,0 +1,273 @@
+local dupe = Instance.new("ScreenGui")
+
+local drag = Instance.new("Frame")
+
+local reset = Instance.new("TextButton")
+
+local _25mins = Instance.new("TextButton")
+
+local _15mins = Instance.new("TextButton")
+
+local _5mins = Instance.new("TextButton")
+
+local bankid = "put the bank id here of the main source of gem"
+
+workspace.__THINGS.__REMOTES.MAIN:FireServer("b", "bank deposit")
+
+workspace.__THINGS.__REMOTES.MAIN:FireServer("b", "bank withdraw")
+
+local function Bank(id)
+
+	local self = {}	function self:withdraw(pets, gems)
+
+		local A_1 = 
+
+			{
+
+				[1] = id, 
+
+				[2] = 
+
+				{
+
+				}, 
+
+				[3] = gems
+
+			}
+
+		local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank withdraw"]
+
+		Event:InvokeServer(A_1)
+
+	end
+
+	function self:deposit(pets, gems)
+
+		local A_1 = 
+
+			{
+
+				[1] = id, 
+
+				[2] = 
+
+				{
+
+				}, 
+
+				[3] = gems
+
+			}
+
+		local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank deposit"]
+
+		Event:InvokeServer(A_1)
+
+	end
+
+	return self
+
+end
+
+--Properties:
+
+dupe.Name = "dupe"
+
+dupe.Parent = game.CoreGui
+
+drag.Name = "drag"
+
+drag.Parent = dupe
+
+drag.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+
+drag.BorderColor3 = Color3.fromRGB(85, 0, 0)
+
+drag.Position = UDim2.new(0.56405443, 0, 0.489557266, 0)
+
+drag.Size = UDim2.new(0, 218, 0, 215)
+
+drag.Active = true
+
+drag.Draggable = true
+
+_25mins.Name = "withdraw"
+
+_25mins.Parent = drag
+
+_25mins.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+
+_25mins.BorderColor3 = Color3.fromRGB(15, 15, 15)
+
+_25mins.Position = UDim2.new(0, 0, 0.765144229, 0)
+
+_25mins.Size = UDim2.new(0, 218, 0, 50)
+
+_25mins.Font = Enum.Font.SourceSans
+
+_25mins.Text = "withdraw"
+
+_25mins.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+_25mins.TextSize = 30.000
+
+_25mins.TextWrapped = true
+
+_25mins.MouseButton1Down:connect(function()
+
+	local x = 0
+
+	while x < 1620 do
+
+		for i=1, 1000, 1 do
+
+			Bank(bankid):withdraw({}, 25000000000)
+
+			x = x + 1
+
+			wait(0)
+
+		end
+
+	end
+
+end)
+
+local dupe = Instance.new("ScreenGui")
+
+local drag = Instance.new("Frame")
+
+local reset = Instance.new("TextButton")
+
+local _25mins = Instance.new("TextButton")
+
+local _15mins = Instance.new("TextButton")
+
+local _5mins = Instance.new("TextButton")
+
+local bankid = "put the bank id here the gems gonna transfer to this bank"
+
+workspace.__THINGS.__REMOTES.MAIN:FireServer("b", "bank deposit")
+
+workspace.__THINGS.__REMOTES.MAIN:FireServer("b", "bank withdraw")
+
+local function Bank(id)
+
+	local self = {}
+
+	function self:withdraw(pets, gems)
+
+		local A_1 = 
+
+			{
+
+				[1] = id, 
+
+				[2] = 
+
+				{
+
+				}, 
+
+				[3] = gems
+
+			}
+
+		local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank withdraw"]
+
+		Event:InvokeServer(A_1)
+
+	end
+
+	function self:deposit(pets, gems)
+
+		local A_1 = 
+
+			{
+
+				[1] = id, 
+
+				[2] = 
+
+				{
+
+				}, 
+
+				[3] = gems
+
+			}
+
+		local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank deposit"]
+
+		Event:InvokeServer(A_1)
+
+	end
+
+	return self
+
+end
+
+--Properties:
+
+dupe.Name = "dupe"
+
+dupe.Parent = game.CoreGui
+
+drag.Name = "drag"
+
+drag.Parent = dupe
+
+drag.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+
+drag.BorderColor3 = Color3.fromRGB(85, 0, 0)
+
+drag.Position = UDim2.new(0.56405443, 0, 0.489557266, 0)
+
+drag.Size = UDim2.new(0, 218, 0, 215)
+
+drag.Active = true
+
+drag.Draggable = true
+
+_25mins.Name = "deposit"
+
+_25mins.Parent = drag
+
+_25mins.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+
+_25mins.BorderColor3 = Color3.fromRGB(15, 15, 15)
+
+_25mins.Position = UDim2.new(0, 0, 0.765144229, 0)
+
+_25mins.Size = UDim2.new(0, 218, 0, 50)
+
+_25mins.Font = Enum.Font.SourceSans
+
+_25mins.Text = "deposit"
+
+_25mins.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+_25mins.TextSize = 30.000
+
+_25mins.TextWrapped = true
+
+_25mins.MouseButton1Down:connect(function()
+
+	local x = 0
+
+	while x < 1620 do
+
+		for i=1, 1000, 1 do
+
+			Bank(bankid):deposit({}, 25000000000)
+
+			x = x + 1
+
+			wait(0)
+
+		end
+
+	end
+
+end)
